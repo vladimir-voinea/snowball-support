@@ -1,0 +1,34 @@
+/* Snowball support pages. The game's palette and fonts (docs/art-direction.md). Lilita One and Nunito are SIL OFL. */
+@font-face { font-family: "Lilita One"; src: url("fonts/LilitaOne.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Nunito"; src: url("fonts/Nunito.woff2") format("woff2"); font-weight: 400 900; font-display: swap; }
+
+:root {
+  --night: #1d2547; --snow: #f4f7fb; --frost: #bfd9f2; --pine: #2e5e73; --ember: #ff7a2f; --spark: #ffc93c;
+  --bg: var(--snow); --text: var(--night); --muted: #4a5578; --panel: #ffffff; --rule: #d6e4f2; --link: var(--pine);
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #141a33; --text: var(--snow); --muted: #c3cde3; --panel: var(--night); --rule: #2f3a66; --link: var(--frost); }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 18px/1.6 "Nunito", system-ui, sans-serif; }
+a { color: var(--link); font-weight: 700; text-underline-offset: 3px; }
+header.band { background: radial-gradient(120% 140% at 50% 0%, #3a4b86 0%, var(--night) 60%, #11162d 100%); color: var(--snow); border-bottom: 5px solid var(--spark); }
+header.band .inner { max-width: 760px; margin: 0 auto; padding: 40px 20px 36px; text-align: center; }
+header.band img { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+.eyebrow { color: var(--spark); font-weight: 800; letter-spacing: .18em; text-transform: uppercase; font-size: 14px; margin: 18px 0 4px; }
+h1, h2 { font-family: "Lilita One", "Arial Rounded MT Bold", sans-serif; font-weight: 400; line-height: 1.15; }
+h1 { font-size: clamp(38px, 8vw, 58px); margin: 6px 0 10px; }
+header.band p.lede { margin: 0 auto; max-width: 560px; color: rgba(244,247,251,.86); }
+nav.tabs { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-top: 22px; }
+nav.tabs a { color: var(--snow); text-decoration: none; padding: 8px 16px; border-radius: 999px; border: 2px solid rgba(191,217,242,.5); }
+nav.tabs a[aria-current="page"] { background: var(--spark); color: var(--night); border-color: var(--spark); }
+main { max-width: 760px; margin: 0 auto; padding: 32px 20px 56px; }
+h2 { font-size: 30px; margin: 36px 0 8px; }
+section.card { background: var(--panel); border: 1px solid var(--rule); border-radius: 18px; padding: 6px 22px 18px; margin: 18px 0; }
+section.card h2 { margin-top: 16px; font-size: 25px; }
+ul { padding-left: 1.2em; } li { margin: 6px 0; }
+.hot { color: var(--ember); font-weight: 800; }
+.note { color: var(--muted); font-size: 16px; }
+.pill { display: inline-block; background: var(--spark); color: var(--night); font-weight: 800; padding: 6px 14px; border-radius: 999px; }
+footer { border-top: 1px solid var(--rule); color: var(--muted); font-size: 15px; text-align: center; padding: 22px 20px 40px; }
